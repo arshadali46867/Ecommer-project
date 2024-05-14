@@ -23,32 +23,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Product 
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Milk</a></li>
-                <li><a class="dropdown-item" href="#">Curd</a></li>
-                <li><a class="dropdown-item" href="#">Milkshake</a></li>
-                <li><a class="dropdown-item" href="#">Lassi</a></li>
-                <li><a class="dropdown-item" href="#">Paneer</a></li>
-                <li><a class="dropdown-item" href="#">Chesse</a></li>
-                <li><a class="dropdown-item" href="#">Ice--cream</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'ML' %}">Milk</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'CR' %}">Curd</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'MS' %}">Milkshake</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'LS' %}">Lassi</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'PN' %}">Paneer</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'CZ' %}">Chesse</a></li>
+                <li><a class="dropdown-item" href="{% url 'category' 'IC' %}">Ice--cream</a></li>
                 
               </ul>
             </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contect Us</a>
+                <a class="nav-link" href="{% url "contact" %}">Contect Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="{% url "about" %}">About Us</a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+            
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -91,6 +89,9 @@
       {% block banner-slider %}{% endblock banner-slider %}
       {% block information %}{% endblock information %}
       {% block main-content %}{% endblock main-content %}
+      {% block ProductDetails %}{% endblock ProductDetails %}
+      {% block contant %}{% endblock contant %}
+      {% block about %}{% endblock about %}
       
 <footer class="container-fluid fixed-bottom bg-success text-center text-white p-2 mt-5">
     Copyright : 2022 || Develop by : Arshad Ali
