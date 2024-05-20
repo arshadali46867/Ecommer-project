@@ -59,10 +59,9 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">arshad</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="{% url "profile" %}">Profile</a></li>
                 <li><a class="dropdown-item" href="#">Orders</a></li>
-                <li><a class="dropdown-item" href="#">Change</a></li>
-                <li><a class="dropdown-item" href="#">Password</a></li>
+                <li><a class="dropdown-item" href="{% url "passwordchange" %}">Change Password</a></li>
                 <li><a class="dropdown-item" href="#">Logout</a></li>
                 
               </ul>
@@ -74,10 +73,10 @@
               <a href="#" class="nav-link ">Wishlist 4</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="#" class="nav-link ">login</a>
+              <a href="{% url "login" %}" class="nav-link ">login</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="#" class="nav-link ">Registration</a>
+              <a href="{% url "customerregistration" %}" class="nav-link ">Registration</a>
             </li>
         </div>
       </nav>
@@ -92,6 +91,11 @@
       {% block ProductDetails %}{% endblock ProductDetails %}
       {% block contant %}{% endblock contant %}
       {% block about %}{% endblock about %}
+      {% block customerregistration %}{% endblock customerregistration %}
+      {% block login %}{% endblock login %}
+      {% block profile %}{% endblock profile %}
+      {% block address %}{% endblock address %}
+      {% block updateaddress %}{% endblock updateaddress %}
       
 <footer class="container-fluid fixed-bottom bg-success text-center text-white p-2 mt-5">
     Copyright : 2022 || Develop by : Arshad Ali

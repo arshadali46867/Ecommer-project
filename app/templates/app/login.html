@@ -1,0 +1,29 @@
+{% extends "app/base.html" %} 
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block login %}
+<div class="container">
+    
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3" >
+        <h3>Customer Registration</h3>
+        <hr>
+      
+
+    <form action="" method="post" novalidate class="shadow p-5 " style="color: black;">
+       {% csrf_token %} 
+      
+
+      {{form.as_p}}
+
+      <input type="submit" value="Login">
+      <a href="{% url "password_reset" %}" class="d-flex-rigth">Forget Password</a>
+      
+      
+    </form>
+</div>
+</div>
+
+
+{% endblock login %}
